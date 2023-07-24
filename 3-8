@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class practice {
+    public static void main(String[] args) {
+        System.out.print("몇개의 랜덤한 정수를 생성할까요 : ");
+        Scanner user = new Scanner(System.in);
+        int num = user.nextInt();
+        int [] array = new int[num];
+
+        for (int i = 0; i < num; i++) 
+        {
+            int random;
+            do {
+                random = (int)(Math.random()*100) + 1;
+            } while (equal(array, random));
+            array[i] = random;
+        }
+
+        for (int i = 0; i < num; i++) 
+        {
+            System.out.print(array[i] + " ");
+            if ((i + 1) % 10 == 0)
+                System.out.println();
+        }
+
+        user.close();
+    }
+
+    public static boolean equal(int[] arr, int target) 
+    {
+        for (int num : arr) 
+        {
+            if (num == target) 
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+}
