@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class practice {
+    public static void main (String[] args) {
+        Scanner user = new Scanner(System.in);
+        System.out.print("정수를 입력하세요 : ");
+        int number = user.nextInt();
+        for (int i=number; i>0; i--) {
+            for (int j=i; j>0; j--)
+                System.out.print("*");
+            System.out.println();
+        }
+        user.close();
+    }
+}
