@@ -11,6 +11,6 @@ public class practice {
         }
 
         double average = sum / array.length;
-        System.out.println("\n평균: " + average);
+        System.out.println("\naverage: " + average);
     }
 }
